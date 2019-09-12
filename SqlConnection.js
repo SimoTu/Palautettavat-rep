@@ -1,11 +1,11 @@
 var mysql = require('mysql');
-
+// luodaan yhteys
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "..."
   });
-
+//yhdistetään ja tähän lisätty tarvittavat kyselyt
 con.connect(function(err) {
   if (err) throw err;
   console.log("Yhdistetty!");
@@ -18,7 +18,7 @@ con.connect(function(err) {
   });
 
 
-
+// funktio kyselyiden luomiseen
  function luoKysely(sql){
 
     con.query(sql, function (err, result) {
