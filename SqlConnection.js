@@ -1,32 +1,90 @@
-var mysql = require('mysql');
+const express = require('express');
+const PORT = 8000;
+const HOST = '127.0.0.1';
+const app = express();
+const mysql = require('mysql');
+
+// 
+app.listen(PORT, HOST, function() {
+  console.log("server up and running @ http://" + HOST + ":" + PORT);
+});
+app.get('/', function(req, res) {
+  console.log("Hetkinen");
+  res.send("Valmiit osoitteet: /luotietokanta, /tietokannankautto, /luotaulu, /lisaatauluun");
+});
+
+
 // luodaan yhteys
-var con = mysql.createConnection({
+const con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "..."
+  password: "Makkaraperunat1"
   });
-//yhdistetään ja tähän lisätty tarvittavat kyselyt
+
+
+
+//yhdistetään
 con.connect(function(err) {
   if (err) throw err;
   console.log("Yhdistetty!");
-  sql= "CREATE DATABASE db";
-    luoKysely(sql);
-    luoKysely("USE db;");
-    luoKysely("CREATE TABLE registration(id int not null PRIMARY KEY, first varchar(255) , last varchar(255), age int);");
-    luoKysely("INSERT INTO registration(id,first, last, age) VALUES(1,'Aku','Ankka',45);");
-    con.end();
   });
 
-
-// funktio kyselyiden luomiseen
- function luoKysely(sql){
-
-    con.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log("SQL-lause onnistui!");
+//luodaan tietokanta
+  app.get('/luotietokanta', (req, res) => {
+    let sql = 'CREATE DATABASE db';
+    con.query(sql, (err, result) => {
+        if(err) throw err;
+        console.log(result);
+        res.send('Tietokanta luotu...');
+        
     });
+});
 
+//muutetaan tietokantaa
+app.get('/tietokannankautto', (req, res) => {
+  let sql = 'USE db';
+  con.query(sql, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+      res.send('Tietokanta aktivoitu...');
+      
+  });
+});
+// luodaan taulu
+app.get('/luotaulu', (req, res) => {
+  let sql = "CREATE TABLE registration(id int not null PRIMARY KEY, first varchar(255) , last varchar(255), age int);";
+  con.query(sql, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+      res.send('Taulu luotu...');
+      
+      
+  });
+});
+
+
+
+
+// lisätään tauluun
+app.get('/lisaatauluun', (req, res) => {
+  let sql = "INSERT INTO registration(id,first, last, age) VALUES(1,'Aku','Ankka',45);";
+  con.query(sql, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+      res.send('Tiedot lisattu...');
+      con.end();
+      
+  });
+});
+
+
+ 
 
 
     
-};
+
+
+
+
+
+
