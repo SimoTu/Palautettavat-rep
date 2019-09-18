@@ -10,7 +10,7 @@ app.listen(PORT, HOST, function() {
 });
 app.get('/', function(req, res) {
   console.log("Hetkinen");
-  res.send("Valmiit osoitteet: /luotietokanta, /tietokannankautto, /luotaulu, /lisaatauluun");
+  res.send("Valmiit osoitteet: /luotietokanta, /tietokannankautto, /luotaulu, /lisaatauluun, /paivitys, /poista");
 });
 
 
@@ -72,6 +72,34 @@ app.get('/lisaatauluun', (req, res) => {
       if(err) throw err;
       console.log(result);
       res.send('Tiedot lisattu...');
+      
+      
+  });
+});
+
+// Päivitetään taulua
+app.get('/paivitys', (req, res) => {
+  let newTitle = 'Hessu';
+  let sql = `UPDATE registration SET first = '${newTitle}' WHERE id = 1`;
+  con.query(sql, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+      res.send('Tiedot paivitettu..');
+      
+      
+  });
+});
+
+
+
+
+ // Poisto operaatio
+app.get('/poista', (req, res) => {
+  let sql = "DELETE FROM registration WHERE id = 1";
+  con.query(sql, (err, result) => {
+      if(err) throw err;
+      console.log(result);
+      res.send('Tiedot poistettu');
       con.end();
       
   });
