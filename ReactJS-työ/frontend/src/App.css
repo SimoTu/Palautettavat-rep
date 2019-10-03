@@ -1,0 +1,163 @@
+.App {
+  text-align: center;
+
+
+
+  
+  
+}
+
+
+
+
+.table{
+  background-image: url("https://ak7.picdn.net/shutterstock/videos/13988927/thumb/1.jpg");
+  background-color: rgb(38, 53, 134);
+  
+}
+
+.App-header {
+  
+  background-image: url("https://wallpaperaccess.com/full/284549.jpg");
+  background-color: rgb(84, 117, 97);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100;
+  padding: 22px;
+  position: relative;
+ 
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+
+li {
+  float: left;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+form{
+margin-top: 50px;
+  display: block;
+  color: #111;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+
+}
+
+span{
+font-size:25px;
+  margin-left: 20px;
+}
+.container{
+  background-image: url("https://ak7.picdn.net/shutterstock/videos/13988927/thumb/1.jpg");
+  background-color: rgb(38, 53, 134);
+
+}
+.container2{
+  background-image: url("https://ak7.picdn.net/shutterstock/videos/13988927/thumb/1.jpg");
+  background-color: rgb(38, 53, 134);
+}
+.Reg-body{
+ text-align: center;
+  display: flex;
+  list-style-type: none;
+  
+
+  background-color: #333;
+  font-size:25px;
+}
+
+.btn{
+
+  background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);  background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);  background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);  background-image: -o-linear-gradient(top, #eb94d0, #2079b0);  background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
+}
+
+.first{
+  margin-right: 20px;
+}
+
+.last{
+  margin-right: 20px;
+}
+.age{
+  margin-right: 20px;
+}
+
+.regID{
+  margin-left: 50px;
+}
+
+.input-field{
+
+  display: block;
+
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0267a6), color-stop(1, #468ccf));
+	background:-moz-linear-gradient(top, #0267a6 5%, #468ccf 100%);
+	background:-webkit-linear-gradient(top, #0267a6 5%, #468ccf 100%);
+	background:-o-linear-gradient(top, #0267a6 5%, #468ccf 100%);
+	background:-ms-linear-gradient(top, #0267a6 5%, #468ccf 100%);
+	background:linear-gradient(to bottom, #0267a6 5%, #468ccf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0267a6', endColorstr='#468ccf',GradientType=0);
+	background-color:#0267a6;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #3866a3;
+	display:inline-block;
+	cursor:pointer;
+	color:#14396a;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 9px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7cacde;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #0267a6));
+	background:-moz-linear-gradient(top, #468ccf 5%, #0267a6 100%);
+	background:-webkit-linear-gradient(top, #468ccf 5%, #0267a6 100%);
+	background:-o-linear-gradient(top, #468ccf 5%, #0267a6 100%);
+	background:-ms-linear-gradient(top, #468ccf 5%, #0267a6 100%);
+	background:linear-gradient(to bottom, #468ccf 5%, #0267a6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#0267a6',GradientType=0);
+	background-color:#468ccf;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+        
