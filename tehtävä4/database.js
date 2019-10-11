@@ -36,7 +36,7 @@ class Database {
         console.log("got", athletes);
         callback(athletes);
       }
-    }).sort({birth: 1});
+    }).sort({age: 1});
   }
 
   postOne(user, callback) {
