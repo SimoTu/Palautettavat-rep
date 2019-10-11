@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="table.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Sisällytä asiakassovellus -->
+  <script src="./client.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <title>Urheilijat II -tehtävä</title>
+</head>
+<body onLoad="loadApp()">
+  <div id="lomake">
+    <!-- Tämä div-elementti sisältää "kiinteän" käyttöliittymän -->
+    <form>
+      <fieldset>
+          <legend>Lomake urheilijoiden tietojen lataamiseen</legend>
+          <!-- TODO: tarkista mikä ero on <button> ja <input type="submit"> elementeillä -->
+          <button id="lataa" class="myButton">Lataa urheilijat</button>
+      </fieldset>
+    </form>
+  </div></br></br>
+  <div id="urheilijat">
+    <!-- urheilijoiden tiedot -->
+    <div id="athletes"></div>
+  </div>
+</body>
+</html>

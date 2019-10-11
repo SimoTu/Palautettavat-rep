@@ -1,0 +1,85 @@
+.kuva {
+  height: 100px;
+}
+
+.table {
+    background-color: white;
+    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    vertical-align:bottom;
+}
+
+form {
+    font-family: arial, sans-serif;
+    color: #3a3e47;
+    font-size: 17px;
+    text-align: center;
+    width: 40%;
+    margin:auto;
+
+
+  }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    color: #3a3e47;
+    height: 100%;
+    font-size: 17px;
+    margin: 30px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .menu__link {
+    color: #3a3e47;
+    display: inline-block;
+    height: 100%;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+}
+
+  tr:nth-child(even) {
+    background-color: #c7c7c7;
+  }
+  
+  table#table1 {
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+  }
+
+  .myButton {
+    box-shadow: 7px 4px 5px -1px #1564ad;
+    background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color:#79bbff;
+    border-radius:5px;
+    border:1px solid #337bc4;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    font-weight:bold;
+    padding:13px 60px;
+    text-decoration:none;
+    text-shadow:3px 1px 0px #528ecc;
+  }
+  .myButton:hover {
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5;
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
+  }
+  
+          
