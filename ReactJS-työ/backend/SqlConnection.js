@@ -81,8 +81,8 @@ app.get('/use/:db', (req, res) => {
 
 
 //valitaan kaikki henkilöt
-app.get('/users/:tbl', (req, res) => {
-  let sql = `SELECT * FROM ${req.params.tbl};`;
+app.get('/hae', (req, res) => {
+  let sql = `SELECT * FROM PERSONS;`;
   con.query(sql, (err, result) => {
       if(err) throw err;
       console.log(result);
